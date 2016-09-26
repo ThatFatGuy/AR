@@ -48,3 +48,15 @@ datplot <- ggplot(data, aes(x=stage, y=r, fill=factor(restistance))) +
 
 ```
 
+>making faceted graphs for genome coverage
+
+```R
+sp <- ggplot(data, aes(x=position, y=coverage)) + geom_line (colour=sample, group=sample)
+sp
+sp <- sp + facet_grid(sample ~ .)
+sp
+
+```
+
+
+
