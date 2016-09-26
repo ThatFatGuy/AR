@@ -35,3 +35,16 @@ trimmed_reverse_reads.fastq.gz
 ```
 
 >outputs will be in sampleX_output/output/summary.html - enjoy. Sam
+
+
+>Random R plot stuff (includes my sample names - make sure you change these)
+
+```R
+datplot <- ggplot(data, aes(x=stage, y=r, fill=factor(restistance))) +
+  geom_boxplot(fill=('White'))+
+  geom_dotplot(binaxis='y', stackdir='center', dotsize=0.8)+
+  scale_fill_brewer(palette='RdBu')+
+  labs(x="Resistance selection", y="Growth rate")
+
+```
+
